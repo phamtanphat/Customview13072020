@@ -37,6 +37,20 @@ public class TextViewCircle extends LinearLayout {
             TypedArray typedArray = context.obtainStyledAttributes(attributeSet,R.styleable.TextViewCircle);
             mTextTitle = typedArray.getString(R.styleable.TextViewCircle_textTitle);
             mDrawableIcon = typedArray.getResourceId(R.styleable.TextViewCircle_icon,R.mipmap.ic_launcher);
+            typedArray.recycle();
+
+            mapview(view);
+            setData();
         }
+    }
+
+    private void setData() {
+        mTvTitle.setText(mTextTitle);
+        mImgIcon.setImageResource(mDrawableIcon);
+    }
+
+    private void mapview(View view) {
+        mTvTitle = view.findViewById(R.id.textView);
+        mImgIcon = view.findViewById(R.id.imageView);
     }
 }
