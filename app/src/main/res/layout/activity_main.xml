@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <com.example.customview13072020.TextViewCircle
+        android:id="@+id/textViewCircle"
         app:textTitle="Word"
         app:icon="@mipmap/ic_launcher"
         android:layout_width="wrap_content"

@@ -41,6 +41,7 @@ public class TextViewCircle extends LinearLayout {
 
             mapview(view);
             setData();
+
         }
     }
 
@@ -52,5 +53,8 @@ public class TextViewCircle extends LinearLayout {
     private void mapview(View view) {
         mTvTitle = view.findViewById(R.id.textView);
         mImgIcon = view.findViewById(R.id.imageView);
+    }
+    public void setOnClickTitle(OnClickListener onClickListener){
+        mTvTitle.setOnClickListener(onClickListener);
     }
 }
